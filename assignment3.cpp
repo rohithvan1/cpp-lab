@@ -16,22 +16,22 @@ private:
 
 public:
     Rectangle() {
-        length = 0;
-        width = 0;
-        cout << "Default constructor called!" << endl;
+     length = 0;
+       width = 0;
+     cout << "Default constructor called!" << endl;
     }
 
     Rectangle(float l, float w) {
-        length = l;
-        width = w;
-        cout << "Parameterized constructor called!" << endl;
+    length = l;
+      width = w;
+      cout << "Parameterized constructor called!" << endl;
     }
 
     void display() {
-        cout << "Length: " << length << ", Width: " << width << endl;
+    cout << "Length: " << length << ", Width: " << width << endl;
     }
     ~Rectangle() {
-        cout << "Destructor called for Rectangle object." << endl;
+    cout << "Destructor called for Rectangle object." << endl;
     }
 };
 
@@ -40,11 +40,11 @@ int main() {
     Rectangle rect1;
     rect1.display();
 
-    cout << "\nCreating rect2 using parameterized constructor..." << endl;
+    cout << "\nCreating rect2 using parameterized constructor" << endl;
     Rectangle rect2(10.5, 6.3);
     rect2.display();
 
-    cout << "\nProgram ending... destructors will be called automatically." << endl;
+    cout << "\ndestructors will be called automatically." << endl;
 
-    return 0;
+    
 }
