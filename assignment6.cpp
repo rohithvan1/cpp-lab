@@ -1,64 +1,50 @@
-//6. Write a C++ program to implement a telephone bill class with Name, Address, Tel. No., No. of calls
-//as data members. Compute the amount to be paid if the charges per call is Rs. 2/-. using friend
-//function
-
-//Answer
-
 #include <iostream>
+#include <string>
 using namespace std;
 
-float area(float r) 
-{
-    float a;
-    a = 3.14 * r * r;
+class TelephoneBill {
+private:
+    string Name;
+    string Address;
+    string TelNo;
+    int no_of_calls;
 
-    return a;
+public:
+    void inputdetails() {
+       cout << "Enter Name: ";
+      getline(cin, Name);
+cout << "Enter Address: ";
+       getline(cin, Address);
+  cout << "Enter Telephone Number: ";
+       getline(cin, TelNo);
+        cout << "Enter Number of Calls: ";
+       cin >> no_of_calls;
+    }
+
+    friend void calculateamount(TelephoneBill tb);
+};
+
+void calculateamount(TelephoneBill tb) {
+    const int charge_per_call = 2;
+    int total_amount = tb.no_of_calls * charge_per_call;
+
+   cout << "\nTelephone Bill " << endl;
+   cout << "Name: " << tb.Name << endl;
+    cout << "Address: " << tb.Address << endl;
+   cout << "Telephone Number: " << tb.TelNo << endl;
+    cout << "Number of Calls: " << tb.no_of_calls << endl;
+   cout << "Amount to be Paid: Rs. " << total_amount << endl;
 }
 
-float area(int s) 
-{
-    int a;
-    a = s * s;
+int main() {
+    TelephoneBill customer;
 
-    return a;
-}
+    cout << "Enter Customer Details " << endl;
+    customer.inputdetails();
 
-float area(float l, float b) 
-{
-    float a;
-    a = l * b;
-
-    return a;
-}
-
-float area(int b, int h, int dummy) 
-{
-    int a;
-    a = 0.5 * b * h;
-
-    return a;
-}
-
-int main()
-{
-    float r, l, b_rect;
-    int s, base, height;
-
-    cout << "Enter radius of circle: ";
-    cin >> r;
-    cout << "Area of Circle = " << area(r) << endl;
-
-    cout << "\nEnter side of square: ";
-    cin >> s;
-    cout << "Area of Square = " << area(s) << endl;
-
-    cout << "\nEnter length and breadth of rectangle: ";
-    cin >> l >> b_rect;
-    cout << "Area of Rectangle = " << area(l, b_rect) << endl;
-
-    cout << "\nEnter base and height of triangle: ";
-    cin >> base >> height;
-    cout << "Area of Triangle = " << area(base, height, 0) << endl;
+    calculateamount(customer);
 
    
 }
+
+
