@@ -19,12 +19,12 @@ protected:
 public:
     void inputStudent() {
         cout << "Enter Name: ";
-        getline(cin, Name);
+        cin>>Name;
         cout << "Enter Roll Number: ";
         cin >> Rollno;
-        cin.ignore(); // Clear buffer
+        cin.ignore();
         cout << "Enter Course: ";
-        getline(cin, Course);
+        cin>>Course;
     }
 
     void displayStudent() {
@@ -77,13 +77,12 @@ public:
 int main() {
     Result r;
 
-    cout << "--- Enter Student Details ---" << endl;
+    cout << " Enter Student Details" << endl;
     r.inputStudent();
     r.inputMarks();
     r.inputBonus();
 
-    cout << "\n--- Student Result ---" << endl;
+    cout << "\n Student Result" << endl;
     r.displayResult();
 
-    return 0;
 }
