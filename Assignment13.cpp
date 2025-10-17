@@ -38,7 +38,7 @@ private:
 
 public:
     void input() {
-        cout << "Enter base and height of triangle: ";
+        cout << "Enter base and height: ";
         cin >> base >> height;
     }
 
@@ -54,15 +54,15 @@ int main() {
     c_rectangle rect;
     c_triangle tri;
 
-    cout << "--- Rectangle ---" << endl;
+    cout << " Rectangle" << endl;
     rect.input();
     poly = &rect;   
     poly->area();   
 
-    cout << "\n--- Triangle ---" << endl;
+    cout << "\n Triangle " << endl;
     tri.input();
     poly = &tri;     
     poly->area();    
 
-    return 0;
+    
 }
