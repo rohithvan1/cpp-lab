@@ -11,25 +11,25 @@ using namespace std;
 
 class Time {
 private:
-    int hours;
-    int minutes;
-    int seconds;
+        int hours;
+        int minutes;
+        int seconds;
 
 public:
     void inputTime() {
-        cout << "Enter hours: ";
-        cin >> hours;
+         cout << "Enter hours: ";
+             cin >> hours;
         cout << "Enter minutes: ";
-        cin >> minutes;
+         cin >> minutes;
         cout << "Enter seconds: ";
         cin >> seconds;
     }
     void displayTime() {
         cout << hours << ":" << minutes << ":" << seconds << endl;
     }
-    friend Time sumTime(Time t1, Time t2);
+    friend Time sumtime(Time t1, Time t2);
 };
-Time sumTime(Time t1, Time t2) {
+Time sumtime(Time t1, Time t2) {
     Time t3;
 
     t3.seconds = t1.seconds + t2.seconds;
@@ -51,7 +51,7 @@ int main() {
     cout << "\nEnter second time:" << endl;
     t2.inputTime();
 
-    t3 = sumTime(t1, t2);
+    t3 = sumtime(t1, t2);
 
     cout << "\nFirst Time: ";
     t1.displayTime();
@@ -62,5 +62,5 @@ int main() {
     cout << "Sum of Times: ";
     t3.displayTime();
 
-    return 0;
+  
 }
