@@ -26,13 +26,13 @@ public:
     }
 
     void deposit(double amount) {
-        balance += amount;
+        balance = balance + amount;
         cout << "Amount deposited: " << amount << endl;
     }
 
     void withdraw(double amount) {
         if (amount <= balance) {
-            balance -= amount;
+            balance = balance - amount;
             cout << "Amount withdrawn: " << amount << endl;
         } else {
             cout << "Insufficient balance!" << endl;
@@ -74,7 +74,7 @@ public:
     void calculateServiceCharge() {
         if (balance < minimum_balance) {
             double charge = 50; 
-            balance -= charge;
+            balance = balance - charge;
             cout << "Balance less than minimum! Service charge of " << charge << " deducted." << endl;
         } else {
             cout << "No service charge applied." << endl;
@@ -83,7 +83,7 @@ public:
 };
 
 int main() {
-    cout << "--- Savings Account ---" << endl;
+    cout << " Savings Account " << endl;
     SavingsAccount sa;
     sa.inputAccount();
     sa.inputSavings();
@@ -92,7 +92,7 @@ int main() {
     sa.displayBalance();
     sa.calculateInterest();
 
-    cout << "\n--- Current Account ---" << endl;
+    cout << "\n Current Account " << endl;
     CurrentAccount ca;
     ca.inputAccount();
     ca.inputCurrent();
@@ -102,5 +102,5 @@ int main() {
     ca.calculateServiceCharge();
     ca.displayBalance();
 
-    return 0;
+    
 }
