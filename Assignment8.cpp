@@ -31,12 +31,12 @@ int main() {
     c1.display();
 
     cout << "After incrementing (++c1): ";
-    ++c1; // Calls overloaded operator++
+    ++c1; 
     c1.display();
 
     cout << "Increment again (++c1): ";
     ++c1;
     c1.display();
 
-    return 0;
+ 
 }
