@@ -60,5 +60,5 @@ int main()
     cin >> base >> height;
     cout << "Area of Triangle = " << area(base, height, 0) << endl;
 
-    return 0;
+   
 }
