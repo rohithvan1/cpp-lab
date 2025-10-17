@@ -23,51 +23,50 @@ private:
     }
 
 public:
-    void inputDetails() {
-        cout << "Enter Book ID: ";
-        cin >> BookID;
-        cin.ignore(); 
-        cout << "Enter Book Name: ";
-        getline(cin, BookName);
-        cout << "Enter Book Price: ";
-        cin >> BookPrice;
+    void inputdetails() {
+      cout << "Enter Book ID: ";
+ cin >> BookID;
+       cin.ignore(); 
+   cout << "Enter Book Name: ";
+    getline(cin, BookName);
+    cout << "Enter Book Price: ";
+     cin >> BookPrice;
     }
-    void displayDetails() {
-        cout << "\nBook Details:" << endl;
-        cout << "Book ID: " << BookID << endl;
-        cout << "Book Name: " << BookName << endl;
-        cout << "Book Price: " << BookPrice << endl;
+    void displaydetails() {
+      cout << "\nBook Details:" << endl;
+  cout << "Book ID: " << BookID << endl;
+      cout << "Book Name: " << BookName << endl;
+     cout << "Book Price: " << BookPrice << endl;
     }
     void purchase() {
         int n;
-        cout << "Enter number of copies required: ";
-        cin >> n;
-        cout << "Total cost to be paid: Rs. " << total_cost(n) << endl;
+     cout << "Enter number of copies required: ";
+     cin >> n;
+    cout << "Total cost to be paid: Rs. " << total_cost(n) << endl;
     }
 };
 
 int main() {
     Book b1, b2, b3;
+   cout << "Enter details for Book 1:" << endl;
+ b1.inputdetails();
+  cout << "\nEnter details for Book 2:" << endl;
+ b2.inputdetails();
+  cout << "\nEnter details for Book 3:" << endl;
+ b3.inputdetails();
 
-    cout << "Enter details for Book 1:" << endl;
-    b1.inputDetails();
-    cout << "\nEnter details for Book 2:" << endl;
-    b2.inputDetails();
-    cout << "\nEnter details for Book 3:" << endl;
-    b3.inputDetails();
-
-    cout << "\n--- Book Purchase Details ---" << endl;
+    cout << "\nBook Purchase Details " << endl;
 
     cout << "\nBook 1:" << endl;
-    b1.displayDetails();
+    b1.displaydetails();
     b1.purchase();
 
     cout << "\nBook 2:" << endl;
-    b2.displayDetails();
+    b2.displaydetails();
     b2.purchase();
 
     cout << "\nBook 3:" << endl;
-    b3.displayDetails();
+    b3.displaydetails();
     b3.purchase();
 
     return 0;
