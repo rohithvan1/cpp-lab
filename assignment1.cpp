@@ -18,19 +18,19 @@ private:
 
 public:
     void readData() {
-        cout << "Enter car brand: ";
-        cin >> brand;
-        cout << "Enter car model: ";
-        cin >> model;
-        cout << "Enter manufacturing year: ";
-        cin >> year;
+    cout << "Enter car brand: ";
+      cin >> brand;
+      cout << "Enter car model: ";
+   cin >> model;
+      cout << "Enter manufacturing year: ";
+     cin >> year;
     }
 
     void display() {
-        cout << "\nCar Details:" << endl;
-        cout << "Brand: " << brand << endl;
-        cout << "Model: " << model << endl;
-        cout << "Year: " << year << endl;
+       cout<< "\nCar Details:" << endl;
+        cout <<"Brand: " << brand << endl;
+  cout << "Model: " << model << endl;
+      cout << "Year: " << year << endl;
     }
 };
 
@@ -46,7 +46,7 @@ int main() {
     cout << "\nEnter details for Car 3:" << endl;
     car3.readData();
 
-    cout << "\n--- Car Information ---" << endl;
+    cout << "\nCar Information " << endl;
     car1.display();
     car2.display();
     car3.display();
