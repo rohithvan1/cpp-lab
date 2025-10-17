@@ -18,7 +18,7 @@ protected:
 public:
     void inputPerson() {
         cout << "Enter name: ";
-        getline(cin, name);
+        cin>>name;
         cout << "Enter age: ";
         cin >> age;
         cin.ignore(); 
@@ -32,18 +32,18 @@ public:
 
 class Student : public Person {
 private:
-    int roll_number;
+    int rollnumber;
 
 public:
     void inputStudent() {
         cout << "Enter roll number: ";
-        cin >> roll_number;
+        cin >> rollnumber;
         cin.ignore();
     }
 
     void showDetails() {
         display(); 
-        cout << "Roll Number: " << roll_number << endl;
+        cout << "Roll Number: " << rollnumber << endl;
     }
 };
 
@@ -53,8 +53,8 @@ int main() {
     cout << "Enter details for student:" << endl;
     s1.inputPerson();  
     s1.inputStudent();
-    cout << "\n--- Student Details ---" << endl;
+    cout << "\n Student Details " << endl;
     s1.showDetails(); 
 
-    return 0;
+ 
 }
